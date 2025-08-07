@@ -2,10 +2,20 @@
 <html lang="pt-br">
 <head>
 <meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<link rel="stylesheet" href="style.css">
 <title>Botão de Teste</title>
 <script>
+  const tempoInicial = Date.now();
+
   function clicou() {
-    alert("Botão foi clicado!");
+    const tempoClique = Date.now();
+    const tempoDecorrido = (tempoClique - tempoInicial) / 1000;
+    const mensagem = `Você demorou ${tempoDecorrido.toFixed(2)} segundos para clicar no botão!`;
+
+    alert(mensagem);
+    console.log('ALERT:', mensagem);
+    console.log('Tempo decorrido:', tempoDecorrido.toFixed(2), 'segundos');
   }
 </script>
 </head>
